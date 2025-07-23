@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Breast Cancer Risk Prediction - Webcam</title>
+		<meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+ <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Use url_for for local static files -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  <noscript><link rel="stylesheet" href="{{ url_for('static', filename='noscript.css') }}" /></noscript>
+<link rel="shortcut icon" href="static/logo.png" type="image/png+xml">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ url_for('index') }}" class="logo">Protect Your Future</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+    <li class="active"><a href="{{ url_for('index') }}">Upload From Computer </a></li>
+    <li><a href="{{ url_for('webcam') }}">Live Webcam</a></li>
+    <li><a href="{{ url_for('elements') }}">Connect with Machine</a></li>
+  </ul>
+						<ul class="icons">
+							<li>
+                <a href="https://x.com/Satyabrata1610" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/satyabratananda.brahmachary" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/thecryptorrx_/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+              </li>
+              <li>
+                <a href="https://github.com/Satyabrata1170" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+              </li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+      <div id="main">
+        <!-- Upload from Computer Section -->
+       <!-- Upload from Camera Section -->
+<section id="camera" class="section-camera d-flex align-items-center flex-column justify-content-center text-center">
+  <div class="container">
+    <h2 class="mb-4 fade-in">Capture Image from Camera</h2>
+    <div class="card camera-card mx-auto p-4 shadow-lg fade-in">
+      <div id="cameraArea">
+        <video id="video" width="320" height="240" autoplay class="mb-3 rounded img-preview d-none"></video>
+        <div class="d-flex justify-content-center gap-2">
+          <button id="startCamera" class="btn btn-outline-primary mb-2">Start <i class="fas fa-play-circle"></i></button>
+          <button id="snap" class="btn btn-pink mb-2 d-none">Capture <i class="fas fa-camera"></i></button>
+        </div>
+      </div>
+      <canvas id="canvas" class="d-none mb-2 rounded img-preview"></canvas>
+      <div id="cameraPreview" class="d-none fade-in">
+        <img id="capturedImage" class="img-fluid rounded shadow-lg mb-2" alt="Captured">
+        <div id="cameraResult" class="predict-value"></div>
+      </div>
+      <button id="retake" class="btn btn-outline-secondary mt-2 d-none">Retake</button>
+    </div>
+  </div>
+</section>
+      </div>
+
+				<!-- Footer -->
+					  <footer id="footer">
+        <section>
+    <form method="POST" action="https://api.web3forms.com/submit" id="form">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="ec8d0d7d-8831-4113-91f7-0030f7779c57">
+
+      <div class="fields">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="3" required></textarea>
+        </div>
+      </div>
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <!-- Optional: Redirect after submit -->
+      <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html"> -->
+
+      <ul class="actions">
+        <li><input type="submit" value="Send Message" /></li>
+      </ul>
+      <div id="result" class="form-result"></div>
+    </form>
+  </section>
+        <section class="split contact">
+          <section class="alt">
+            <h3>Address</h3>
+             <p>
+        Bhubaneswar, Odisha<br />
+        India 
+      </p>
+          </section>
+          <section>
+            <h3>Phone</h3>
+            <p><a href="#">+91 XXX XXX XXXX</a></p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">info@breastpredict.com</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+              <li>
+                <a href="https://x.com/Satyabrata1610" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/satyabratananda.brahmachary" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/thecryptorrx_/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+              </li>
+              <li>
+                <a href="https://github.com/Satyabrata1170" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+			<ul>
+				<li>&copy; 2025 all right reserved</li>
+				<li>Design: <a href="https://satyainsights.netlify.app/">Satya</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='util.js') }}"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+	</body>
+</html>
